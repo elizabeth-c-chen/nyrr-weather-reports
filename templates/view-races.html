@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elizabeth is COOL</title>
+</head>
+<body>
+    <h1>{{ runnerDetails.firstName }} {{ runnerDetails.lastName }}</h1>
+    <p>
+    <ul>
+        {% for runnerRace in runnerEvents %}
+            <li><strong>Bib:</strong> {{ runnerRace.bib }}</li>
+            <li><strong>Event Name:</strong> {{ runnerRace.eventName }}</li>
+            <li><strong>Venue:</strong> {{ runnerRace.venue }}</li>
+            <li><strong>Distance Name:</strong> {{ runnerRace.distanceName }}</li>
+            <li><strong>Start Date Time:</strong> {{ runnerRace.startDateTime }}</li>
+            <li><strong>Actual Time:</strong> {{ runnerRace.actualTime }}</li>
+            <li><strong>Actual Pace:</strong> {{ runnerRace.actualPace }}</li>
+        {% endfor %}
+    </ul>
+    </p>
+  
+</body>
+</html>
